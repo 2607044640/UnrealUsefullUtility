@@ -1,8 +1,8 @@
-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Shortcut/@EntryValue">MyGetHudInPlayer</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Shortcut/@EntryValue">JFGetHudInPlayer</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Text/@EntryValue">		AMainHUD* HUD = Cast&lt;$AMainHUD$&gt;(GetNetOwningPlayer()-&gt;GetPlayerController(GetWorld())-&gt;GetHUD());
 </s:String>
@@ -13,7 +13,7 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Shortcut/@EntryValue">MyGetSubSystem</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Shortcut/@EntryValue">JFGetSubSystem</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Text/@EntryValue">GetWorld()-&gt;GetGameInstance()-&gt;GetSubsystem&lt;$END$&gt;();</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
@@ -21,7 +21,7 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Shortcut/@EntryValue">MyDataTable</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Shortcut/@EntryValue">JFDataTable</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Text/@EntryValue">YourDataTabl$END$e = LoadObject&lt;UDataTable&gt;(this,*YourPath);
 	if (YourDataTable)
@@ -55,7 +55,7 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Shortcut/@EntryValue">MyCreateDefaultSubobject</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Shortcut/@EntryValue">JFCreateDefaultSubobject</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Text/@EntryValue">	SphereComponent=CreateDefaultSubobject&lt;$END$SphereComponent&gt;(TEXT("SphereComponent"));
 </s:String>
@@ -64,7 +64,7 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/Shortcut/@EntryValue">MyGetFramework</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/Shortcut/@EntryValue">JFGetFramework</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1DA7547235E30E43A2BA2C9EC3FE4476/Text/@EntryValue">$TYPE$* YourTempGameFramework;
 		YourTempGameFramework =Cast&lt;$TYPE2$&gt;(UGameplayStatics::$END$(GetWorld()));</s:String>
@@ -105,7 +105,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Shortcut/@EntryValue">MyRandomArray</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Shortcut/@EntryValue">JFRandomArray</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Text/@EntryValue">int32 RandomArrayNum=FMath::RandRange(0,$YourArray$.Num()-1);</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Field/=YourArray/@KeyIndexDefined">True</s:Boolean>
@@ -115,7 +115,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Shortcut/@EntryValue">DefAddInputAction</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Shortcut/@EntryValue">JFDefAddInputAction</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Text/@EntryValue">#define ADDINPUTACTION(KeyEventName) if (KeyDataTable-&gt;GetRowMap().Contains(KeyEventName))\
 {\
@@ -134,7 +134,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Shortcut/@EntryValue">MyTimeLineBegin</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Shortcut/@EntryValue">JFTimeLineBegin</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Text/@EntryValue">if (CurveFloat) 
 	{
@@ -154,7 +154,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Shortcut/@EntryValue">MyTimeLine</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Shortcut/@EntryValue">JFTimeLine</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Text/@EntryValue">public:
 	FTimeline MyTimeline; // 声明FTimeline对象
@@ -172,7 +172,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Shortcut/@EntryValue">MyFilePath</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Shortcut/@EntryValue">JFFilePath</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Text/@EntryValue">inline FString $MyPath$=TEXT("$END$");</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Field/=MyPath/@KeyIndexDefined">True</s:Boolean>
@@ -182,7 +182,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Shortcut/@EntryValue">MyStaticCast</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Shortcut/@EntryValue">JFStaticCast</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Text/@EntryValue">const $YOUR$* ParentClass = static_cast&lt;const $YOUR1$*&gt;($END$);</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Field/=YOUR/@KeyIndexDefined">True</s:Boolean>
@@ -194,7 +194,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Shortcut/@EntryValue">DebugMessage</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Shortcut/@EntryValue">JFDMessage</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Text/@EntryValue">	//DebugMessage
 	FString str = FString::Printf(TEXT($DebugMessage$));
@@ -209,7 +209,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Shortcut/@EntryValue">MySpawnActorDeferred</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Shortcut/@EntryValue">JFSpawnActorDeferred</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Text/@EntryValue">auto TempTrans=GetActorTransform();
 		auto SpawnedDeferredActor = GetWorld()-&gt;SpawnActorDeferred&lt;$YourClass$&gt;($UrClass$::StaticClass(), TempTrans);
@@ -224,7 +224,7 @@ InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Shortcut/@EntryValue">MyEffectResourceHeader</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Shortcut/@EntryValue">JFEffectResourceHeader</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Text/@EntryValue">USTRUCT()
 struct FEffectResourceHeader
@@ -261,7 +261,7 @@ struct FEffectResourceHeader
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/Shortcut/@EntryValue">MyMakeUserWidget</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/Shortcut/@EntryValue">JFMakeUserWidget</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=79250426CDE35343B71EA4A98080B88A/Text/@EntryValue">template &lt;typename T&gt;void MakeUserWidget(T*&amp; ObjectPtr, const TCHAR* Path);
 template &lt;typename T&gt;void ABasicItem::MakeUserWidget(T*&amp; ObjectPtr, const TCHAR* Path)
@@ -285,7 +285,7 @@ template &lt;typename T&gt;void ABasicItem::MakeUserWidget(T*&amp; ObjectPtr, co
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Shortcut/@EntryValue">MyCreateComponent</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Shortcut/@EntryValue">JFCreateComponent</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Text/@EntryValue">if (!yiew)
 	{
@@ -332,7 +332,7 @@ class $CLASS_MODULE_API_MACRO$$PREFIX$$UNPREFIXED_CLASS_NAME$ : public $PREFIXED
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Shortcut/@EntryValue">DebugTimer</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Shortcut/@EntryValue">JFDTimer</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Text/@EntryValue">	//DebugTimer
 	FTimerHandle TempHandle;
@@ -345,7 +345,7 @@ class $CLASS_MODULE_API_MACRO$$PREFIX$$UNPREFIXED_CLASS_NAME$ : public $PREFIXED
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Shortcut/@EntryValue">AbsCreateWidgetFunc</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Shortcut/@EntryValue">JFACreateWidgetFunc</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Text/@EntryValue">template&lt;typename T&gt;
 void MakeUserWidget(T*&amp; ObjectPtr,const TCHAR* Path);
@@ -366,7 +366,7 @@ void $YourClass$::MakeUserWidget(T*&amp;ObjectPtr,const TCHAR* Path)
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Shortcut/@EntryValue">MyLoadClass</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Shortcut/@EntryValue">JFLoadClass</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Text/@EntryValue">TSubclassOf&lt;YourClas$END$s&gt; LoadedClass = LoadClass&lt;YourClass&gt;(this,TEXT(""));</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
@@ -401,7 +401,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Shortcut/@EntryValue">AbsGetSingleObject</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Shortcut/@EntryValue">JFAGetSingleObject</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Text/@EntryValue">template &lt;typename T&gt;
 T* GetSingleObjectWidgetClass(TSubclassOf&lt;UUserWidget&gt; WidgetClass);
@@ -429,7 +429,7 @@ T* $YourClass$::GetSingleObjectWidgetClass(TSubclassOf&lt;UUserWidget&gt; Widget
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Shortcut/@EntryValue">MyBroadcast</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Shortcut/@EntryValue">JFBroadcast</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Text/@EntryValue">if (Dgrwoiwej.IsBound())
 	{
@@ -471,7 +471,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Shortcut/@EntryValue">MyUpropSetting</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Shortcut/@EntryValue">JFUpropSetting</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Text/@EntryValue">	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=Setting)</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
@@ -479,7 +479,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Shortcut/@EntryValue">MyCast</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Shortcut/@EntryValue">JFCast</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Text/@EntryValue">YourClassForCas$END$t* YourClassForCast=Cast&lt;YourClassForCast&gt;(OtherActor);
 </s:String>
@@ -488,7 +488,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Shortcut/@EntryValue">DefCreateUserWidget</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Shortcut/@EntryValue">JFDefCreateUserWidget</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Text/@EntryValue">#define MAKEUSERWIDGETOBJ(ObjPtr, UserWidgetClass, Path) if (!ObjPtr)\
 	{\
@@ -500,7 +500,7 @@ public:
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Shortcut/@EntryValue">AbsFindObject</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Shortcut/@EntryValue">JFAFindObject</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Text/@EntryValue">template &lt;typename T&gt;
 T* FindObject(const TCHAR* Path)
@@ -513,10 +513,61 @@ T* FindObject(const TCHAR* Path)
 }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Shortcut/@EntryValue">JFSDiceFace</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Text/@EntryValue">int32 Situation = 1;
+
+	float DotValue = FVector::DotProduct(GetActorUpVector(), FVector::UpVector);
+	float DotValue_Temp = FVector::DotProduct(GetActorUpVector() * -1, FVector::UpVector);
+
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 2;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorRightVector(), FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 3;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorRightVector() * -1, FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 4;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorForwardVector(), FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 5;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorForwardVector() * -1, FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 6;
+	}
+	TMap&lt;int32, int32&gt; DiceFaceMap;
+	DiceFaceMap.Add(1,1 );
+	DiceFaceMap.Add(2,6 );
+	DiceFaceMap.Add(3,5 );
+	DiceFaceMap.Add(4,2 );
+	DiceFaceMap.Add(5,4 );
+	DiceFaceMap.Add(6,3 );</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Reformat/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Shortcut/@EntryValue">AbsFindClass</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Shortcut/@EntryValue">JFAFindClass</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Text/@EntryValue">template &lt;typename T&gt;
 T* FindClass(const TCHAR* Path)
