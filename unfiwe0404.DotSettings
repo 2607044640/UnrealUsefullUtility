@@ -1,0 +1,819 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/Shortcut/@EntryValue">JFZGetItemByID</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/Text/@EntryValue">const FBasicItemHeader* UItemDataGameInstanceSubsystem::GetBasicItemByID(int32 ID)
+{
+	if (Map_BasicItemData.Contains(ID-1))
+	{
+		return Map_BasicItemData[ID-1];
+	}
+	//DebugMessage
+	FString TempStr = FString::Printf(TEXT("DataInfo Null: %d"),ID);
+	if (GEngine) GEngine-&gt;AddOnScreenDebugMessage(-1, 2.f, FColor::Red, TempStr, false);
+	UE_LOG(LogTemp, Error, TEXT("%s"), *TempStr);
+	//DebugMessage end
+	return nullptr;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=09249B9CDFAF4647A881459ED3B1BAE5/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Shortcut/@EntryValue">JFGetHudInPlayer</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Text/@EntryValue">		AMainHUD* HUD = Cast&lt;$AMainHUD$&gt;(GetNetOwningPlayer()-&gt;GetPlayerController(GetWorld())-&gt;GetHUD());
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Field/=AMainHUD/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Field/=AMainHUD/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0C85A3E38864A64E9FB916AE9CB0F10C/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/Shortcut/@EntryValue">JFZAIController</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/Text/@EntryValue">
+	virtual void OnPossess(APawn* InPawn) override;
+	UFUNCTION()
+	void OnReceiveTargetUpdated(AActor* Actor, FAIStimulus Stimulus);
+	virtual ETeamAttitude::Type GetTeamAttitudeTowards(const AActor&amp; Other) const override;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FA3F6F908CFE14A9B2A61ABA883B630/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/Shortcut/@EntryValue">JFUfunctionServer</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/Text/@EntryValue">UFUNCTION(Server,Reliable,WithValidation)
+	void Server_$END$();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=13782125B4FA5E4B977B0016532B24E9/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Shortcut/@EntryValue">JFGetSubSystem</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Text/@EntryValue">GetWorld()-&gt;GetGameInstance()-&gt;GetSubsystem&lt;$END$&gt;();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=15FF5F2FFD260A4A9BDE3DEF3D4CD358/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Shortcut/@EntryValue">JFDataTable</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Text/@EntryValue">YourDataTabl$END$e = LoadObject&lt;UDataTable&gt;(this,*YourPath);
+	if (YourDataTable)
+	{
+		for (auto RowMap : YourDataTable-&gt;GetRowMap())
+		{
+			int32 ID = 0;
+			FString Left, Right;
+			if (RowMap.Key.ToString().Split(TEXT("_"), &amp;Left, &amp;Right))
+			{
+				ID = FCString::Atoi(*Right) + 1;
+			}
+			TMap&lt;int32, YourFTableRowBase*&gt; Map_YourDataTable; //to field
+			if (!Map_YourDataTable.Contains(ID))
+			{
+				Map_YourDataTable.Add(ID, reinterpret_cast&lt;YourFTableRowBase*&gt;(RowMap.Value));
+			}
+		}
+	}
+	else
+	{
+		FString str = FString::Printf(TEXT("DataPathError: YourDataTable"));
+		if (GEngine) GEngine-&gt;AddOnScreenDebugMessage(-1, 2.f, FColor::Red, str, false);
+		UE_LOG(LogTemp, Error, TEXT("%s"), *str);
+	}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=17EC647500BDA8418CDCF9363BDA0496/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/Shortcut/@EntryValue">JFZPerceptionComponent</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/Text/@EntryValue">PerceptionComponent = CreateDefaultSubobject&lt;UAIPerceptionComponent&gt;(TEXT("PerceptionComponent"));
+	PerceptionComponent-&gt;OnTargetPerceptionUpdated.AddDynamic(this,&amp;AEnemyController::OnReceiveTargetUpdate);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=195080251EEA9845B8A58BD92372BBCD/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Shortcut/@EntryValue">JFCreateDefaultSubobject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Text/@EntryValue">YourComponent = CreateDefaultSubobject&lt;Your$END$Component&gt;(TEXT("YourComponent"));
+	YourComponent-&gt;SetupAttachment(RootComponent);
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1A187F40CB68674C86680459483F960C/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1C3A43E655EB174EB30E0744950BAE94/Text/@EntryValue">if ($SELECTION$)
+{
+  $END$
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1C3A43E655EB174EB30E0744950BAE94/Field/=EXPR/@KeyIndexDefined">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Shortcut/@EntryValue">JFBindAxis</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Text/@EntryValue">	PlayerInputComponent-&gt;BindAxis("$Axis$",this,&amp;$END$::$Axis$);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Field/=Axis/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Field/=Axis/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3018052BBBC37C4392347261A1767BAC/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=33A5B83F4E2D8BD4E3FF6FB3F82C3310/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=33A5B83F4E2D8BD4E3FF6FB3F82C3310/Text/@EntryValue">$COPYRIGHT_LINE$
+
+#pragma once
+
+#include "CoreMinimal.h"
+$BASE_CLASS_INCLUDE_DIRECTIVE$
+#include "$UNPREFIXED_CLASS_NAME$.generated.h"
+
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+class $CLASS_MODULE_API_MACRO$$PREFIX$$UNPREFIXED_CLASS_NAME$ : public $PREFIXED_BASE_CLASS_NAME$
+{
+	GENERATED_BODY()
+
+public:	
+	$PREFIX$$UNPREFIXED_CLASS_NAME$();
+
+protected:
+	virtual void BeginPlay() override;
+
+public:	
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+		
+	
+};
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Shortcut/@EntryValue">JFOnComponentEndOverlap</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Text/@EntryValue">-&gt;OnComponentEndOverlap.AddDynamic(this,&amp;$YourClass$::$My$OnComponentEndOverlap);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Field/=My/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Field/=My/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Field/=YourClass/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Field/=YourClass/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=34AD94B792B14E4D8C206893AEBC9373/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/Shortcut/@EntryValue">JFBindAction</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/Text/@EntryValue">	PlayerInputComponent-&gt;BindAction("lkjasdf",IE_Pressed,this,&amp;$END$::lkjasdf);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=358D46F98741FF449F33DBA2CABD78D9/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Shortcut/@EntryValue">JFRandomArray</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Text/@EntryValue">int32 RandomArrayNum=FMath::RandRange(0,$YourArray$.Num()-1);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Field/=YourArray/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Field/=YourArray/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=40216BFF2DE2B9408D319115B0F8C476/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Shortcut/@EntryValue">JFDefAddInputAction</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Text/@EntryValue">#define ADDINPUTACTION(KeyEventName) if (KeyDataTable-&gt;GetRowMap().Contains(KeyEventName))\
+{\
+FKeyInfoHeader* KeyInfoHeader = reinterpret_cast&lt;FKeyInfoHeader*&gt;(KeyDataTable-&gt;GetRowMap()[KeyEventName]);\
+FKey Key = GetUserKey(KeyEventName);\
+if (!Key.IsValid())\
+{\
+Key = KeyInfoHeader-&gt;DefaultKey;\
+}\
+InputMappingContext-&gt;MapKey(KeyInfoHeader-&gt;InputAction, Key);\
+}			
+//ADDINPUTACTION(TEXT("Jump"));
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=47DC72D4AFDD744591B04D91265E6BFC/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Shortcut/@EntryValue">JFTimeLineBegin</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Text/@EntryValue">if (CurveFloat) 
+	{
+		FOnTimelineFloat OnTimelineFloatEvent;
+		FOnTimelineEvent OnTimelineFinishedEvent;
+		
+		OnTimelineFloatEvent.BindUFunction(this, TEXT("OnTimelineTick"));
+		OnTimelineFinishedEvent.BindUFunction(this, TEXT("OnTimelineEndEvent"));
+		MyTimeline.AddInterpFloat(CurveFloat, OnTimelineFloatEvent);
+		MyTimeline.SetTimelineLength(ETimelineLengthMode::TL_LastKeyFrame); 
+
+		MyTimeline.SetTimelineFinishedFunc(OnTimelineFinishedEvent);
+		//	MyTimeline.TickTimeline(DeltaTime);
+	}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4914E9D8B4E6054F9BFAE5D4BE91C579/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Shortcut/@EntryValue">JFTimeLine</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Text/@EntryValue">public:
+	FTimeline MyTimeline; // 声明FTimeline对象
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* CurveFloat; // 声明曲线对象
+
+	UFUNCTION()
+	void OnTimelineTick(float Output);	// Timeline 更新时调用
+
+	UFUNCTION()
+	void OnTimelineEndEvent(); // Timeline 完成最后一帧后调用</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4A081A738B577541BC8B5B19F1868570/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Shortcut/@EntryValue">JFFilePath</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Text/@EntryValue">inline FString $MyPath$=TEXT("$END$");</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Field/=MyPath/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Field/=MyPath/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C1373FA6E538042967D53C78F50C4EA/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/Shortcut/@EntryValue">JFUpropertyBindWidget</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/Text/@EntryValue">	UPROPERTY(meta=(BindWidget))
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4C6808271C31354F82AD37D51087426C/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Shortcut/@EntryValue">JFStaticCast</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Text/@EntryValue">const $YOUR$* $END$$YOUR$ = static_cast&lt;const $YOUR$*&gt;();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Field/=YOUR/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Field/=YOUR/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Field/=YOUR1/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Field/=YOUR1/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5146252916B3A1418E9FF1FD9BAA64A2/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Shortcut/@EntryValue">JFOnComponentBeginOverlap</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Text/@EntryValue">-&gt;OnComponentBeginOverlap.AddDynamic(this,&amp;$YourClass$::$My$OnComponentBeginOverlap);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Field/=My/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Field/=My/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Field/=YourClass/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Field/=YourClass/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5790F614CCCEF448B93CAB73A1710D7A/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6ACA25203EC0A64DAB1BA4E6C572A94A/Description/@EntryValue">QWER</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Shortcut/@EntryValue">JFDMessage</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Text/@EntryValue">	//DebugMessage
+	FString TempStr = FString::Printf(TEXT($Nice$));
+		if (GEngine) GEngine-&gt;AddOnScreenDebugMessage(-1, 2.f, FColor::Red, TempStr, false);
+			UE_LOG(LogTemp, Error, TEXT("%s"),*TempStr);
+		//DebugMessage end
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Field/=DebugMessage/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Field/=DebugMessage/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Field/=Nice/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Field/=Nice/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6DABFD5DC3FEA142BB00BC60715BB2B6/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/Shortcut/@EntryValue">JFUfunctionMulti</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/Text/@EntryValue">UFUNCTION(NetMulticast,Reliable)
+	void Multi_$END$();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6F7BEC576C0C9142A1F3D76A1162E437/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/Shortcut/@EntryValue">JFZJsonWriteGetAllActorsOfClass</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/Text/@EntryValue">TArray&lt;TSharedPtr&lt;FJsonValue&gt;&gt; JsonValues;
+
+	TArray&lt;AActor*&gt; Actors;
+	UGameplayStatics::GetAllActorsOfClass(this, AActor::StaticClass(), Actors);
+
+	for (AActor* Ac : Actors)
+	{
+		TSharedPtr&lt;FJsonObject&gt; JsonObject(new FJsonObject);
+		JsonObject-&gt;SetStringField(TEXT("Name"), Ac-&gt;GetName());
+
+		TArray&lt;TSharedPtr&lt;FJsonValue&gt;&gt; Location;
+		Location.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorLocation().X)));
+		Location.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorLocation().Y)));
+		Location.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorLocation().Z)));
+
+		TArray&lt;TSharedPtr&lt;FJsonValue&gt;&gt; Rotation;
+		Rotation.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorRotation().Pitch)));
+		Rotation.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorRotation().Yaw)));
+		Rotation.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorRotation().Roll)));
+
+		TArray&lt;TSharedPtr&lt;FJsonValue&gt;&gt; Scale3D;
+		Scale3D.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorScale3D().X)));
+		Scale3D.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorScale3D().Y)));
+		Scale3D.Add(MakeShareable(new FJsonValueNumber(Ac-&gt;GetActorScale3D().Z)));
+
+		JsonObject-&gt;SetArrayField(TEXT("Location"), Location);
+		JsonObject-&gt;SetArrayField(TEXT("Rotation"), Rotation);
+		JsonObject-&gt;SetArrayField(TEXT("Scale3D"), Scale3D);
+
+		JsonValues.Add(MakeShareable(new FJsonValueObject(JsonObject)));
+	}
+	FString JsonStr;
+	TSharedRef&lt;TJsonWriter&lt;&gt;&gt; JsonWriter = TJsonWriterFactory&lt;&gt;::Create(&amp;JsonStr);
+	if (FJsonSerializer::Serialize(JsonValues, JsonWriter))
+	{
+		FFileHelper::SaveStringToFile(JsonStr,TEXT("d:\\2.json")); //todo FileName
+		//todo Build "Json"
+	}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=708566CD653ABB46B2589290BAF95BBE/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Shortcut/@EntryValue">JFSpawnActorDeferred</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Text/@EntryValue">auto TempTrans = GetActorTransform();
+	auto SpawnedDeferredActor = GetWorld()-&gt;SpawnActorDeferred&lt;YourSpawnClass&gt;(YourSpawnClass::StaticClass(), TempTrans);
+	SpawnedDeferredActor-&gt;FinishSpawning(TempTrans);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=72617DE6E65B1042B872200C6C41D2A1/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Shortcut/@EntryValue">JFEffectResourceHeader</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Text/@EntryValue">USTRUCT()
+struct FEffectResourceHeader
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, Category=Sound)
+	USoundBase* SoundBase; // 声音基础类指针
+
+	UPROPERTY(EditAnywhere, Category=Sound)
+	float VolumeMultiplier; // 音量倍增器
+
+	UPROPERTY(EditAnywhere, Category=Sound)
+	float StartTime; // 开始时间
+
+	UPROPERTY(EditAnywhere, Category=Sound)
+	float PitchMultiplier; // 音调倍增器
+
+	UPROPERTY(EditAnywhere, Category=Emitter)
+	UParticleSystem* EmitterTemplate; // 粒子发射器模板
+
+	UPROPERTY(EditAnywhere, Category=Emitter)
+	FVector EmitterScale; // 粒子发射器的缩放
+
+	FEffectResourceHeader(): SoundBase(nullptr), StartTime(0), EmitterTemplate(nullptr)
+	{
+		PitchMultiplier = 1;
+		VolumeMultiplier = 1;
+		EmitterScale = FVector(1, 1, 1);
+	}
+};</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=768A8E5414D41445A4F426D8B196C560/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/Shortcut/@EntryValue">JFDetectDragIfPressed</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/Text/@EntryValue">return UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent,this,EKeys::LeftMouseButton).NativeReply;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7873D017B6496E48AC073A0F19EEA2D6/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/Shortcut/@EntryValue">JFGetHUD</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/Text/@EntryValue">AMyHU$END$D* AMyHUD = Cast&lt;AMyHUD&gt;(UGameplayStatics::GetPlayerController(GetWorld(),0)-&gt;GetHUD());</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=84619017E7810D45B58A1710461BFC0F/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/Shortcut/@EntryValue">JFUfunctionClient</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/Text/@EntryValue">UFUNCTION(Client,Reliable)
+void Client_$END$();
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=974D6FAB333B3047A63F7B6B6BFFF1EC/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/Shortcut/@EntryValue">gre</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/Text/@EntryValue">afdsg</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4EB24A8CDC0E14CBB0A623B5EA054BD/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Shortcut/@EntryValue">JFCreateComponent</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Text/@EntryValue">if (!yiew)
+	{
+		yiew = NewObject&lt;yiew&gt;(this);
+		yiew-&gt;RegisterComponentWithWorld(GetWorld());
+		yiew-&gt;AttachToComponent(RootComponent, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+		// yiew-&gt;SetCollisionProfileName(TEXT());
+	}
+	return yiew;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A94604ACB76F4E44B16CF468CD435405/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Text/@EntryValue">$COPYRIGHT_LINE$
+
+#pragma once
+
+#include "CoreMinimal.h"
+$BASE_CLASS_INCLUDE_DIRECTIVE$
+#include "$UNPREFIXED_CLASS_NAME$.generated.h"
+
+/**
+ * $END$
+ */
+UCLASS()
+class $CLASS_MODULE_API_MACRO$$PREFIX$$UNPREFIXED_CLASS_NAME$ : public $PREFIXED_BASE_CLASS_NAME$
+{
+	GENERATED_BODY()
+	
+	
+	
+	
+};
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=BASE_005FCLASS_005FINCLUDE_005FDIRECTIVE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=CLASS_005FMODULE_005FAPI_005FMACRO/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=COPYRIGHT_005FLINE/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=MY_005FHEADER_005FINCLUDE_005FDIRECTIVE/InitialSection/@EntryValue">9B40C53BE58C5E4CA29DAD5FB3D8C07A</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=MY_005FHEADER_005FINCLUDE_005FDIRECTIVE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=PREFIX/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=PREFIXED_005FBASE_005FCLASS_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=PREFIXED_005FBASE_005FCLASS_005FNAME/Order/@EntryValue">6</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ADB98212EDF3FF4717288E6048F8FDC0/Field/=UNPREFIXED_005FCLASS_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Shortcut/@EntryValue">JFDTimer</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Text/@EntryValue">	//DebugTimer
+	FTimerHandle TempHandle;
+	GetWorld()-&gt;GetTimerManager().SetTimer(TempHandle, this, &amp;$YourClass$::TestFunc, 2);
+	//DebugTimer END</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Field/=YourClass/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Field/=YourClass/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B85655681997BC4D9E02096B1705A20B/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/Shortcut/@EntryValue">JFUFunction</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/Text/@EntryValue">	UFUNCTION(BlueprintNativeEvent,BlueprintCallable)</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BAF247034458DC4BB289E3A0B538ED53/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Shortcut/@EntryValue">JFAMakeUserWidget</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Text/@EntryValue">template&lt;typename T&gt;
+void MakeUserWidget(T*&amp; ObjectPtr,const TCHAR* Path);
+template&lt;typename T&gt;
+void $YourClass$::MakeUserWidget(T*&amp;ObjectPtr,const TCHAR* Path)
+{
+	if(!ObjectPtr)
+	{
+		TSubclassOf&lt;T&gt;UIClass=LoadClass&lt;T&gt;(nullptr,Path);
+		ObjectPtr=CreateWidget&lt;T&gt;(GetOwningPlayerController(),UIClass);
+		ObjectPtr-&gt;AddToViewport();
+	}
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Field/=YourClass/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Field/=YourClass/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BFCA1A9D7EA83D488576D38FFC78D848/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Shortcut/@EntryValue">JFLoadClass</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Text/@EntryValue">TSubclassOf&lt;YourCla$END$ss&gt; YourClass_LoadedClass = LoadClass&lt;YourClass&gt;(this,);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C298AF886E0E6E4B9122B672E129EDE8/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C3F5286BA514457D555D05D714C839BD/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C3F5286BA514457D555D05D714C839BD/Text/@EntryValue">$COPYRIGHT_LINE$
+
+#pragma once
+
+#include "CoreMinimal.h"
+$BASE_CLASS_INCLUDE_DIRECTIVE$
+#include "$UNPREFIXED_CLASS_NAME$.generated.h"
+
+UCLASS()
+class $CLASS_MODULE_API_MACRO$$PREFIX$$UNPREFIXED_CLASS_NAME$ : public $PREFIXED_BASE_CLASS_NAME$
+{
+	GENERATED_BODY()
+	
+public:	
+	$PREFIX$$UNPREFIXED_CLASS_NAME$();
+
+protected:
+	virtual void BeginPlay() override;
+
+public:	
+	virtual void Tick(float DeltaTime) override;
+
+	
+	
+};
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/Shortcut/@EntryValue">JFZDrag</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/Text/@EntryValue">
+FReply UItemBoxUI::NativeOnMouseButtonDown(const FGeometry&amp; InGeometry, const FPointerEvent&amp; InMouseEvent)
+{
+	return UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent,this,EKeys::LeftMouseButton).NativeReply;
+}
+
+UItemBoxUI* UItemBoxUI::CopySelf()
+{
+	if (AMyHUD* MyHUD = Cast&lt;AMyHUD&gt;(GetOwningPlayer()-&gt;GetHUD()))
+	{
+		UItemBoxUI* ThisWidget=MyHUD-&gt;GetSingleObjectWidgetClass&lt;UItemBoxUI&gt;(GetClass());
+		ThisWidget-&gt;Image_Item-&gt;SetBrush(Image_Item-&gt;GetBrush());
+		ThisWidget-&gt;TextBlock_Name-&gt;SetText(TextBlock_Name-&gt;GetText());
+		ThisWidget-&gt;TextBlock_Num-&gt;SetText(TextBlock_Num-&gt;GetText());
+		
+		return ThisWidget;
+	}
+
+	FString TempStr = FString::Printf(TEXT("MyHUD Not Find"));
+	if (GEngine) GEngine-&gt;AddOnScreenDebugMessage(-1, 2.f, FColor::Red, TempStr, false);
+	UE_LOG(LogTemp, Error, TEXT("%s"), *TempStr);
+
+	return nullptr;
+}
+
+void UItemBoxUI::NativeOnDragDetected(const FGeometry&amp; InGeometry, const FPointerEvent&amp; InMouseEvent,
+                                      UDragDropOperation*&amp; OutOperation)
+{
+	Super::NativeOnDragDetected(InGeometry, InMouseEvent, OutOperation);
+	
+	OutOperation = UWidgetBlueprintLibrary::CreateDragDropOperation(UDragDropOperation::StaticClass());
+	OutOperation-&gt;Payload = this;
+	OutOperation-&gt;DefaultDragVisual = CopySelf();
+	OutOperation-&gt;Pivot = EDragPivot::MouseDown;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4634E2928D53E409C94ACF392671864/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Shortcut/@EntryValue">JFAGetSingleObject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Text/@EntryValue">template &lt;typename T&gt;
+T* GetSingleObjectWidgetClass(TSubclassOf&lt;UUserWidget&gt; WidgetClass);
+UPROPERTY()
+TMap&lt;UClass*, UUserWidget*&gt; SingleObjectMap;
+
+template &lt;typename T&gt;
+T* $YourClass$::GetSingleObjectWidgetClass(TSubclassOf&lt;UUserWidget&gt; WidgetClass)
+{
+	if (SingleObjectMap.Contains(T::StaticClass()))
+	{
+		return Cast&lt;T&gt;(SingleObjectMap[T::StaticClass()]);
+	}
+	else
+	{
+		T* Object = CreateWidget&lt;T&gt;(GetWorld(), WidgetClass);
+		SingleObjectMap.Add(T::StaticClass(), Object);
+		return Object;
+	}
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Field/=YourClass/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Field/=YourClass/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C5F9541D0AA9634A833B37108385433F/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Shortcut/@EntryValue">JFBroadcast</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Text/@EntryValue">if (Dgrwoiwej.IsBound())
+	{
+		$Dgrwoiwej$.Broadcast($END$);
+	}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Field/=Dgrwoiwej/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Field/=Dgrwoiwej/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CAFD5C443A924A47BBE41CB3BA6A02EB/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/Shortcut/@EntryValue">JFCreateWidget</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/Text/@EntryValue">TSubclassOf&lt;UItemBoxU$END$I&gt; UIClass = LoadClass&lt;UItemBoxUI&gt;(nullptr, *BP_ItemBoxPath);
+	auto ObjectPtr = CreateWidget&lt;UItemBoxUI&gt;(GetOwningPlayer(), UIClass);
+	ObjectPtr-&gt;AddToViewport();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD4F246540FDA946A8CC9B0B7450FA27/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD6CC7596E3E79334480EE35B1467D2C/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CD6CC7596E3E79334480EE35B1467D2C/Text/@EntryValue">$COPYRIGHT_LINE$
+
+#pragma once
+
+#include "CoreMinimal.h"
+$BASE_CLASS_INCLUDE_DIRECTIVE$
+#include "$UNPREFIXED_CLASS_NAME$.generated.h"
+
+UCLASS()
+class $CLASS_MODULE_API_MACRO$$PREFIX$$UNPREFIXED_CLASS_NAME$ : public $PREFIXED_BASE_CLASS_NAME$
+{
+	GENERATED_BODY()
+
+public:
+	$PREFIX$$UNPREFIXED_CLASS_NAME$();
+
+protected:
+	virtual void BeginPlay() override;
+
+public:	
+	virtual void Tick(float DeltaTime) override;
+
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	
+	
+};
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Shortcut/@EntryValue">JFUpropSetting</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Text/@EntryValue">	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category=Setting)</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D4DB3E727D24F242A014F12020E429CF/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Shortcut/@EntryValue">JFRepNotify</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Text/@EntryValue">UPROPERTY(ReplicatedUsing="OnRep_$Your$Notify")
+	float $Your$Notify;
+	UFUNCTION()
+	void OnRep_$Your$Notify();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Field/=Your/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Field/=Your/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D61D502EBE85004EB24415110B544FCE/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Shortcut/@EntryValue">JFCast</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Text/@EntryValue">YourClassForCast* YourClassForCast=Cast&lt;YourClassForCast$END$&gt;();
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DBB1400AF6767D42801C615CAEFED903/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Shortcut/@EntryValue">JFDefCreateUserWidget</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Text/@EntryValue">#define MAKEUSERWIDGETOBJ(ObjPtr, UserWidgetClass, Path) if (!ObjPtr)\
+	{\
+		TSubclassOf&lt;UserWidgetClass&gt; LoginUIClass = LoadClass&lt;UserWidgetClass&gt;(nullptr, Path);\
+		ObjPtr = CreateWidget&lt;UserWidgetClass&gt;(GetOwningPlayerController(), LoginUIClass);\
+	}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DD1D5CC2AB73F740B763F88A6D85C7BF/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Shortcut/@EntryValue">JFAFindObject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Text/@EntryValue">template &lt;typename T&gt;
+T* FindObject(const TCHAR* Path)
+{
+	if (ConstructorHelpers::FObjectFinder&lt;T&gt; ObjectFinder(Path); ObjectFinder.Succeeded())
+	{
+		return ObjectFinder.Object;
+	}
+	return nullptr;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2C99C70A587874EAD5202478E1C594C/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Applicability/=Live/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Applicability/=Surround/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Description/@EntryValue">()</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Text/@EntryValue">{
+$SELECTION$$END$
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F6F5E731E31C4E4BA9452665C1571D08/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Shortcut/@EntryValue">JFZDiceFace</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Text/@EntryValue">int32 Situation = 1;
+
+	float DotValue = FVector::DotProduct(GetActorUpVector(), FVector::UpVector);
+	float DotValue_Temp = FVector::DotProduct(GetActorUpVector() * -1, FVector::UpVector);
+
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 2;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorRightVector(), FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 3;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorRightVector() * -1, FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 4;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorForwardVector(), FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 5;
+		DotValue = DotValue_Temp;
+	}
+
+	DotValue_Temp = FVector::DotProduct(GetActorForwardVector() * -1, FVector::UpVector);
+	if (DotValue &lt; DotValue_Temp)
+	{
+		Situation = 6;
+	}
+	TMap&lt;int32, int32&gt; DiceFaceMap;
+	DiceFaceMap.Add(1,1 );
+	DiceFaceMap.Add(2,6 );
+	DiceFaceMap.Add(3,5 );
+	DiceFaceMap.Add(4,2 );
+	DiceFaceMap.Add(5,4 );
+	DiceFaceMap.Add(6,3 );</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FBBBAE412AF3B540B705FFD171BFCEC8/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Shortcut/@EntryValue">JFAFindClass</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Text/@EntryValue">template &lt;typename T&gt;
+T* FindClass(const TCHAR* Path)
+{
+	if (ConstructorHelpers::FClassFinder&lt;T&gt; ClassFinder(Path); ClassFinder.Succeeded())
+	{
+		return ClassFinder.Class;
+	}
+	return nullptr;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Scope/=F6696F8185506F41B9C4252540BE9C18/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FDA79865D2F9224B990216F3D67B51ED/Scope/=F6696F8185506F41B9C4252540BE9C18/Type/@EntryValue">InCppFile</s:String></wpf:ResourceDictionary>
